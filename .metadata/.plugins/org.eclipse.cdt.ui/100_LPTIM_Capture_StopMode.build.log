@@ -1,0 +1,17 @@
+19:00:40 **** Incremental Build of configuration Debug for project 100_LPTIM_Capture_StopMode ****
+make -j12 all 
+arm-none-eabi-gcc "../FLOWMEET/fm_main.c" -mcpu=cortex-m33 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32U575xx -c -I../Core/Inc -I"D:/FLOWMEET Dropbox/flowmeet/ID/electronica/Boards/Nucleo-U575ZI-Q/DHS/100_LPTIM_Capture_StopMode/FLOWMEET" -I../Drivers/STM32U5xx_HAL_Driver/Inc -I../Drivers/STM32U5xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32U5xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"FLOWMEET/fm_main.d" -MT"FLOWMEET/fm_main.o" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -o "FLOWMEET/fm_main.o"
+arm-none-eabi-gcc -o "100_LPTIM_Capture_StopMode.elf" @"objects.list"   -mcpu=cortex-m33 -T"D:\FLOWMEET Dropbox\flowmeet\ID\electronica\Boards\Nucleo-U575ZI-Q\DHS\100_LPTIM_Capture_StopMode\STM32U575ZITXQ_FLASH.ld" --specs=nosys.specs -Wl,-Map="100_LPTIM_Capture_StopMode.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: 100_LPTIM_Capture_StopMode.elf
+ 
+arm-none-eabi-size  100_LPTIM_Capture_StopMode.elf 
+arm-none-eabi-objdump -h -S 100_LPTIM_Capture_StopMode.elf  > "100_LPTIM_Capture_StopMode.list"
+   text	   data	    bss	    dec	    hex	filename
+  50346	    468	   2196	  53010	   cf12	100_LPTIM_Capture_StopMode.elf
+Finished building: default.size.stdout
+ 
+Finished building: 100_LPTIM_Capture_StopMode.list
+ 
+
+19:00:41 Build Finished. 0 errors, 0 warnings. (took 1s.43ms)
+
